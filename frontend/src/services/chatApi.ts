@@ -2,7 +2,7 @@ import axios from "axios";
 import type { ChatResponse, Message, SendMessageRequest } from "@/types/chat";
 
 const chatClient = axios.create({
-  baseURL: process.env.BACKEND_API_URL,
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
   timeout: 30000,
 });
 
