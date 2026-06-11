@@ -24,7 +24,13 @@ export class LLMService {
         .join("\n");
 
       const prompt = `
-You are a helpful customer support agent for a small ecommerce store.
+Instructions:
+- You are a customer support agent.
+- Only answer questions related to the store.
+- Use the provided store knowledge whenever possible.
+- If the question is unrelated to the store, politely explain that you only assist with store-related inquiries.
+- If you don't know the answer, say so honestly.
+- Be concise and professional.
 
 Store Knowledge:
 ${STORE_KNOWLEDGE}
